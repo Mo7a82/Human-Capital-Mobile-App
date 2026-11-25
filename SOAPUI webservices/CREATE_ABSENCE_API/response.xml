@@ -1,0 +1,19 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+   <env:Header/>
+   <env:Body>
+      <OutputParameters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/create_person_absence/">
+         <P_ABSENCE_DAYS>1</P_ABSENCE_DAYS>
+         <P_ABSENCE_HOURS xsi:nil="true"/>
+         <P_ABSENCE_ATTENDANCE_ID>10921</P_ABSENCE_ATTENDANCE_ID>
+         <P_OBJECT_VERSION_NUMBER>1</P_OBJECT_VERSION_NUMBER>
+         <P_OCCURRENCE>3</P_OCCURRENCE>
+         <P_DUR_DYS_LESS_WARNING>0</P_DUR_DYS_LESS_WARNING>
+         <P_DUR_HRS_LESS_WARNING>0</P_DUR_HRS_LESS_WARNING>
+         <P_EXCEEDS_PTO_ENTIT_WARNING>0</P_EXCEEDS_PTO_ENTIT_WARNING>
+         <P_EXCEEDS_RUN_TOTAL_WARNING>0</P_EXCEEDS_RUN_TOTAL_WARNING>
+         <P_ABS_OVERLAP_WARNING>0</P_ABS_OVERLAP_WARNING>
+         <P_ABS_DAY_AFTER_WARNING>0</P_ABS_DAY_AFTER_WARNING>
+         <P_DUR_OVERWRITTEN_WARNING>0</P_DUR_OVERWRITTEN_WARNING>
+      </OutputParameters>
+   </env:Body>
+</env:Envelope>

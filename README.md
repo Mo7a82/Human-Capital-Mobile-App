@@ -4,23 +4,30 @@ These are the integration files for a proof of concept of a Human Capital mobile
 
 The app was built with Oracle Mobile Application Framework (OMAF) in Java. It talked to EBS through SOAP web services, which Oracle's Integrated SOA Gateway generated from standard and custom PL/SQL APIs.
 
-This repository holds the back-end integration work: the SoapUI test project, sample requests and responses for each service, and a step-by-step guide to publishing a custom PL/SQL package as a web service. The OMAF app source isn't included.
+This repository holds the back-end integration work: the custom PL/SQL package behind the app's screens, a script that registers it as a web service, the SoapUI test project, sample requests for each service, and a step-by-step guide to publishing a custom PL/SQL package as a web service. The OMAF app source isn't included.
 
 ## Repository layout
 
 ```
 Human-Capital-Mobile-App/
 ├── Create Custom WS.docx                    # Guide: publish a custom PL/SQL API as a SOAP service
+├── plsql/
+│   ├── XX_HCM_MOBILE_WS.pls                 # Package spec with Integration Repository annotations
+│   ├── XX_HCM_MOBILE_WS.plb                 # Package body
+│   └── register_irep.sh                     # Compiles and registers the package (the guide's "Session Action Script")
 └── SOAPUI webservices/
-    ├── apps-vis-soapui-project.xml          # SoapUI project with all three service bindings
-    ├── VALIDATE_LOGIN/
+    ├── apps-vis-soapui-project.xml          # SoapUI project with the three standard service bindings
+    ├── VALIDATE_LOGIN/                      # Standard: sign-in check
     │   ├── URL.txt                          # Endpoint
     │   ├── request.xml                      # Sample request
     │   └── response.xml                     # Sample response
-    └── CREATE_ABSCENCE_API/
-        ├── URL.txt
-        ├── request.xml
-        └── response.xml
+    ├── CREATE_ABSENCE_API/                  # Standard: create a vacation request
+    ├── GET_EMPLOYEE_PROFILE/                # Custom services from XX_HCM_MOBILE_WS,
+    ├── GET_ABSENCE_TYPES/                   # each with URL.txt and request.xml
+    ├── GET_VACATION_BALANCE/
+    ├── GET_EMPLOYEE_ABSENCES/
+    ├── GET_MANAGER_WORKLIST/
+    └── DECIDE_ABSENCE/
 ```
 
 ## Architecture
@@ -31,7 +38,7 @@ flowchart LR
     B --> C[FND_WEB_SEC<br/>login check]
     B --> D[HR_PERSON_ABSENCE_API<br/>create, update, delete absence]
     B --> E[FND_USER_PKG<br/>user maintenance]
-    B --> F[Custom PL/SQL packages<br/>profile, balance, worklist]
+    B --> F[XX_HCM_MOBILE_WS<br/>profile, balance, worklists, approval]
     C & D & E & F --> G[(Oracle EBS HRMS)]
 ```
 
@@ -44,6 +51,25 @@ Each SOAP call carries an `SOAHeader` that sets the EBS session context: respons
 | `FND_WEB_SEC_Binding` | `VALIDATE_LOGIN` | Signing in with EBS user name and password |
 | `HR_PERSON_ABSENCE_API_Binding` | `CREATE_PERSON_ABSENCE`, `UPDATE_PERSON_ABSENCE`, `DELETE_PERSON_ABSENCE` | Submitting and managing vacation requests |
 | `FND_USER_PKG_Binding` | `VALIDATE_USER_NAME`, `CHANGE_USER_NAME`, `LDAP_WRAPPER_CREATE_USER`, `LDAP_WRAPPER_UPDATE_USER`, `DERIVE_PERSON_PARTY_ID` and 7 more | User account checks and maintenance |
+
+The custom package `XX_HCM_MOBILE_WS` covers the screens the standard APIs don't:
+
+| Operation | App screen | What it returns or does |
+|---|---|---|
+| `GET_EMPLOYEE_PROFILE` | My Profile | Name, employee number, email, work phone, department, position, job and supervisor for an EBS user |
+| `GET_ABSENCE_TYPES` | New Vacation | Active absence types of the business group, for the type picker |
+| `GET_VACATION_BALANCE` | Vacation Balance | Net entitlement from the employee's vacation accrual plan, through `PER_ACCRUAL_CALC_FUNCTIONS.GET_NET_ACCRUAL` |
+| `GET_EMPLOYEE_ABSENCES` | My Vacations | The employee's requests with their status, newest first |
+| `GET_MANAGER_WORKLIST` | Approval work list | Pending requests of the manager's direct reports |
+| `DECIDE_ABSENCE` | Vacation View | Approves or rejects a pending request through `HR_PERSON_ABSENCE_API.UPDATE_PERSON_ABSENCE`, after checking the caller is the employee's supervisor |
+
+Every operation returns `X_RETURN_STATUS` (`S` or `E`) and `X_MESSAGE`, so the app can show a clear error.
+
+### Approval status
+
+EBS doesn't track approval on an absence created through the API, so the package keeps the status in `ATTRIBUTE1` of the absence descriptive flexfield: `PENDING`, `APPROVED` or `REJECTED`. The app sends `P_ATTRIBUTE1 = PENDING` when it creates a request (see `CREATE_ABSENCE_API/request.xml`), and `DECIDE_ABSENCE` changes it. Requests without a status, such as ones keyed in by HR, count as approved.
+
+If `ATTRIBUTE1` is already used on your instance, pick a free segment and change it in the package body and in the create request.
 
 ### Login
 
@@ -84,6 +110,15 @@ The response returns the new `P_ABSENCE_ATTENDANCE_ID` and object version number
 6. In SoapUI, create a new project from that WSDL and test the call.
 7. If the call fails, check the SOA Monitor for details. A known fix is to download the generated WSDL from the server, remove the `IRepOverloadSeq` line, upload it back to the same location and call again.
 
+## Installing the custom package
+
+1. Copy the `plsql` folder to the EBS application tier.
+2. Source the EBS environment file and run `./register_irep.sh`. It asks for the APPS password, compiles the package, parses its annotations with `irep_parser.pl` and uploads the result with `FNDLOAD`.
+3. Log in as SYSADMIN, open Integrated SOA Gateway > Integration Repository and find `XX_HCM_MOBILE_WS` under Human Resources Suite > PL/SQL.
+4. Follow steps 3 to 6 above to grant, generate, deploy and test each operation.
+
+The package hasn't been compiled against a live instance from this repository, so run it on a test or Vision instance first.
+
 ## Testing with SoapUI
 
 1. Install [SoapUI](https://www.soapui.org/) 5.x.
@@ -92,14 +127,15 @@ The response returns the new `P_ABSENCE_ATTENDANCE_ID` and object version number
 4. Set the WS-Security username token on the request to an EBS user who has the right responsibility.
 5. Run the request and compare it with the sample response in the matching folder.
 
+For the custom operations, add the WSDL you deployed for `XX_HCM_MOBILE_WS` to the SoapUI project and paste the sample requests from the matching folders.
+
 ## Tech stack
 
 Oracle E-Business Suite R12 HRMS, Oracle Integrated SOA Gateway, PL/SQL, SOAP and XML, SoapUI, Java and Oracle Mobile Application Framework.
 
 ## Notes
 
-- The guide refers to a `Session Action Script.txt` file for registering packages, but that file isn't in the repository.
-- The `CREATE_ABSCENCE_API` folder name has a typo ("ABSCENCE"). The API itself is `HR_PERSON_ABSENCE_API`.
+- The guide refers to a `Session Action Script.txt` file for registering packages. `plsql/register_irep.sh` does the same job.
 - The sample requests use Oracle Vision demo data and credentials. Never commit real EBS user names, passwords or employee IDs.
 
 ## Outcome

@@ -1,0 +1,15 @@
+# SoapUI backups and local settings
+*.backup
+soapui-settings.xml
+soapui-errors.log
+soapui.log
+
+# Files created by register_irep.sh
+plsql/*.ildt
+plsql/*.log
+L*.log
+
+# Office lock files and OS files
+~$*
+.DS_Store
+Thumbs.db

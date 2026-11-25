@@ -1,0 +1,26 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xx="http://xmlns.oracle.com/apps/per/soaprovider/plsql/xx_hcm_mobile_ws/" xmlns:op="http://xmlns.oracle.com/apps/per/soaprovider/plsql/xx_hcm_mobile_ws/get_vacation_balance/">
+   <soapenv:Header>
+      <xx:SOAHeader>
+         <!--Optional:-->
+         <xx:Responsibility>SA_HRMS_MANAGER</xx:Responsibility>
+         <!--Optional:-->
+         <xx:RespApplication>PER</xx:RespApplication>
+         <!--Optional:-->
+         <xx:SecurityGroup>STANDARD</xx:SecurityGroup>
+         <!--Optional:-->
+         <xx:NLSLanguage>AMERICAN</xx:NLSLanguage>
+         <!--Optional:-->
+         <xx:Org_Id>0</xx:Org_Id>
+      </xx:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <op:InputParameters>
+         <!--Optional:-->
+         <op:P_PERSON_ID>18701</op:P_PERSON_ID>
+         <!--Optional:-->
+         <op:P_EFFECTIVE_DATE>2015-03-02T00:00:00</op:P_EFFECTIVE_DATE>
+         <!--Optional:-->
+         <op:P_ACCRUAL_CATEGORY>V</op:P_ACCRUAL_CATEGORY>
+      </op:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>
