@@ -140,4 +140,4 @@ Oracle E-Business Suite R12 HRMS, Oracle Integrated SOA Gateway, PL/SQL, SOAP an
 
 ## Outcome
 
-The proof of concept covered sign-in, the employee profile, new vacation requests, the request worklist, the manager's approve or reject view and the vacation balance. EJADA was awarded the full HCM mobile app project after it.
+The proof of concept covered sign-in, the employee profile, new vacation requests, the request worklist, the manager's approve or reject view and the vacation balance. The company was awarded the full HCM mobile app project after it.
