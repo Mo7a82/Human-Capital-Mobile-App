@@ -1,6 +1,6 @@
 # Human-Capital-Mobile-App
 
-These are the integration files for a proof of concept of a Human Capital mobile app for the General Authority of Civil Aviation (GACA), built in 2015. Employees could use the app to sign in, view their profile, request vacation, track requests and check their vacation balance. Managers could approve or reject requests. All of it ran against Oracle E-Business Suite (EBS) HRMS.
+These are the integration files for a proof of concept of a Human Capital mobile app for the Organization, built in 2015. Employees could use the app to sign in, view their profile, request vacation, track requests and check their vacation balance. Managers could approve or reject requests. All of it ran against Oracle E-Business Suite (EBS) HRMS.
 
 The app was built with Oracle Mobile Application Framework (OMAF) in Java. It talked to EBS through SOAP web services, which Oracle's Integrated SOA Gateway generated from standard and custom PL/SQL APIs.
 
