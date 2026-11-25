@@ -1,0 +1,24 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fnd="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_web_sec/" xmlns:val="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_web_sec/validate_login/">
+   <soapenv:Header>
+      <fnd:SOAHeader>
+         <!--Optional:-->
+         <fnd:Responsibility>SYSTEM_ADMINISTRATOR</fnd:Responsibility>
+         <!--Optional:-->
+         <fnd:RespApplication>SYSADMIN</fnd:RespApplication>
+         <!--Optional:-->
+         <fnd:SecurityGroup>STANDARD</fnd:SecurityGroup>
+         <!--Optional:-->
+         <fnd:NLSLanguage>AMERICAN</fnd:NLSLanguage>
+         <!--Optional:-->
+         <fnd:Org_Id>0</fnd:Org_Id>
+      </fnd:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <val:InputParameters>
+         <!--Optional:-->
+         <val:P_USER>OPERATIONS</val:P_USER>
+         <!--Optional:-->
+         <val:P_PWD>welcome</val:P_PWD>
+      </val:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>

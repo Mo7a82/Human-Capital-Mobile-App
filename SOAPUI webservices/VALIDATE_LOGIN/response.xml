@@ -1,0 +1,8 @@
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+   <env:Header/>
+   <env:Body>
+      <OutputParameters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_web_sec/validate_login/">
+         <VALIDATE_LOGIN>Y</VALIDATE_LOGIN>
+      </OutputParameters>
+   </env:Body>
+</env:Envelope>

@@ -1,0 +1,1615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="apps.vis" resourceRoot="" soapui-version="4.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="FND_USER_PKG_Binding" type="wsdl" bindingName="{http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/}FND_USER_PKG_Binding" soapVersion="1_1" anonymous="optional" definition="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/?wsdl"><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/?wsdl</con:url><con:content><![CDATA[<definitions name="FND_USER_PKG" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/" xmlns:tns="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns1="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/change_user_name/" xmlns:tns2="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/derive_person_party_id/" xmlns:tns3="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/form_ldap_wrapper_update_user/" xmlns:tns4="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrapper_change_user_name/" xmlns:tns5="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrapper_create_user/" xmlns:tns6="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrapper_update_user/" xmlns:tns7="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrp_update_user_loader/" xmlns:tns8="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/load_row/" xmlns:tns9="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/set_old_person_party_id/" xmlns:tns10="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/set_old_user_guid/" xmlns:tns11="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/testusername/" xmlns:tns12="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/validate_user_name/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/change_user_name/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_CHANGE_USER_NAME.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/derive_person_party_id/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_DERIVE_PERSON_PARTY_ID.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/form_ldap_wrapper_update_user/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_FORM_LDAP_WRAPPER_UPDATE_USER.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrapper_change_user_name/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_LDAP_WRAPPER_CHANGE_USER_NAME.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrapper_create_user/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_LDAP_WRAPPER_CREATE_USER.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrapper_update_user/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_LDAP_WRAPPER_UPDATE_USER.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrp_update_user_loader/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_LDAP_WRP_UPDATE_USER_LOADER.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/load_row/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_LOAD_ROW.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/set_old_person_party_id/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_SET_OLD_PERSON_PARTY_ID.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/set_old_user_guid/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_SET_OLD_USER_GUID.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/testusername/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_TESTUSERNAME.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/validate_user_name/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_VALIDATE_USER_NAME.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="SOAHeader">
+        <complexType>
+          <sequence>
+            <element name="Responsibility" minOccurs="0" type="string"/>
+            <element name="RespApplication" minOccurs="0" type="string"/>
+            <element name="SecurityGroup" minOccurs="0" type="string"/>
+            <element name="NLSLanguage" minOccurs="0" type="string"/>
+            <element name="Org_Id" minOccurs="0" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="CHANGE_USER_NAME_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns1:InputParameters"/>
+  </message>
+  <message name="DERIVE_PERSON_PARTY_ID_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns2:InputParameters"/>
+  </message>
+  <message name="DERIVE_PERSON_PARTY_ID_Output_Msg">
+    <part name="body" element="tns2:OutputParameters"/>
+  </message>
+  <message name="FORM_LDAP_WRAPPER_UPDATE_USER_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns3:InputParameters"/>
+  </message>
+  <message name="FORM_LDAP_WRAPPER_UPDATE_USER_Output_Msg">
+    <part name="body" element="tns3:OutputParameters"/>
+  </message>
+  <message name="LDAP_WRAPPER_CHANGE_USER_NAME_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns4:InputParameters"/>
+  </message>
+  <message name="LDAP_WRAPPER_CREATE_USER_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns5:InputParameters"/>
+  </message>
+  <message name="LDAP_WRAPPER_UPDATE_USER_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns6:InputParameters"/>
+  </message>
+  <message name="LDAP_WRP_UPDATE_USER_LOADER_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns7:InputParameters"/>
+  </message>
+  <message name="LOAD_ROW_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns8:InputParameters"/>
+  </message>
+  <message name="SET_OLD_PERSON_PARTY_ID_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns9:InputParameters"/>
+  </message>
+  <message name="SET_OLD_PERSON_PARTY_ID_Output_Msg">
+    <part name="body" element="tns9:OutputParameters"/>
+  </message>
+  <message name="SET_OLD_USER_GUID_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns10:InputParameters"/>
+  </message>
+  <message name="SET_OLD_USER_GUID_Output_Msg">
+    <part name="body" element="tns10:OutputParameters"/>
+  </message>
+  <message name="TESTUSERNAME_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns11:InputParameters"/>
+  </message>
+  <message name="TESTUSERNAME_Output_Msg">
+    <part name="body" element="tns11:OutputParameters"/>
+  </message>
+  <message name="VALIDATE_USER_NAME_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns12:InputParameters"/>
+  </message>
+  <portType name="FND_USER_PKG_PortType">
+    <operation name="CHANGE_USER_NAME">
+      <input message="tns:CHANGE_USER_NAME_Input_Msg"/>
+    </operation>
+    <operation name="DERIVE_PERSON_PARTY_ID">
+      <input message="tns:DERIVE_PERSON_PARTY_ID_Input_Msg"/>
+      <output message="tns:DERIVE_PERSON_PARTY_ID_Output_Msg"/>
+    </operation>
+    <operation name="FORM_LDAP_WRAPPER_UPDATE_USER">
+      <input message="tns:FORM_LDAP_WRAPPER_UPDATE_USER_Input_Msg"/>
+      <output message="tns:FORM_LDAP_WRAPPER_UPDATE_USER_Output_Msg"/>
+    </operation>
+    <operation name="LDAP_WRAPPER_CHANGE_USER_NAME">
+      <input message="tns:LDAP_WRAPPER_CHANGE_USER_NAME_Input_Msg"/>
+    </operation>
+    <operation name="LDAP_WRAPPER_CREATE_USER">
+      <input message="tns:LDAP_WRAPPER_CREATE_USER_Input_Msg"/>
+    </operation>
+    <operation name="LDAP_WRAPPER_UPDATE_USER">
+      <input message="tns:LDAP_WRAPPER_UPDATE_USER_Input_Msg"/>
+    </operation>
+    <operation name="LDAP_WRP_UPDATE_USER_LOADER">
+      <input message="tns:LDAP_WRP_UPDATE_USER_LOADER_Input_Msg"/>
+    </operation>
+    <operation name="LOAD_ROW">
+      <input message="tns:LOAD_ROW_Input_Msg"/>
+    </operation>
+    <operation name="SET_OLD_PERSON_PARTY_ID">
+      <input message="tns:SET_OLD_PERSON_PARTY_ID_Input_Msg"/>
+      <output message="tns:SET_OLD_PERSON_PARTY_ID_Output_Msg"/>
+    </operation>
+    <operation name="SET_OLD_USER_GUID">
+      <input message="tns:SET_OLD_USER_GUID_Input_Msg"/>
+      <output message="tns:SET_OLD_USER_GUID_Output_Msg"/>
+    </operation>
+    <operation name="TESTUSERNAME">
+      <input message="tns:TESTUSERNAME_Input_Msg"/>
+      <output message="tns:TESTUSERNAME_Output_Msg"/>
+    </operation>
+    <operation name="VALIDATE_USER_NAME">
+      <input message="tns:VALIDATE_USER_NAME_Input_Msg"/>
+    </operation>
+  </portType>
+  <binding name="FND_USER_PKG_Binding" type="tns:FND_USER_PKG_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="CHANGE_USER_NAME">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/>
+      <input>
+        <soap:header message="tns:CHANGE_USER_NAME_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+    </operation>
+    <operation name="DERIVE_PERSON_PARTY_ID">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/>
+      <input>
+        <soap:header message="tns:DERIVE_PERSON_PARTY_ID_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="FORM_LDAP_WRAPPER_UPDATE_USER">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/>
+      <input>
+        <soap:header message="tns:FORM_LDAP_WRAPPER_UPDATE_USER_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="LDAP_WRAPPER_CHANGE_USER_NAME">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/>
+      <input>
+        <soap:header message="tns:LDAP_WRAPPER_CHANGE_USER_NAME_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+    </operation>
+    <operation name="LDAP_WRAPPER_CREATE_USER">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/>
+      <input>
+        <soap:header message="tns:LDAP_WRAPPER_CREATE_USER_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+    </operation>
+    <operation name="LDAP_WRAPPER_UPDATE_USER">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/>
+      <input>
+        <soap:header message="tns:LDAP_WRAPPER_UPDATE_USER_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+    </operation>
+    <operation name="LDAP_WRP_UPDATE_USER_LOADER">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/>
+      <input>
+        <soap:header message="tns:LDAP_WRP_UPDATE_USER_LOADER_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+    </operation>
+    <operation name="LOAD_ROW">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/>
+      <input>
+        <soap:header message="tns:LOAD_ROW_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+    </operation>
+    <operation name="SET_OLD_PERSON_PARTY_ID">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/>
+      <input>
+        <soap:header message="tns:SET_OLD_PERSON_PARTY_ID_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="SET_OLD_USER_GUID">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/>
+      <input>
+        <soap:header message="tns:SET_OLD_USER_GUID_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="TESTUSERNAME">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/>
+      <input>
+        <soap:header message="tns:TESTUSERNAME_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="VALIDATE_USER_NAME">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/>
+      <input>
+        <soap:header message="tns:VALIDATE_USER_NAME_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+    </operation>
+  </binding>
+  <service name="FND_USER_PKG_Service">
+    <port name="FND_USER_PKG_Port" binding="tns:FND_USER_PKG_Binding">
+      <soap:address location="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_CHANGE_USER_NAME.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/change_user_name/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/change_user_name/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="X_OLD_USER_NAME" type="string" db:index="1" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_NEW_USER_NAME" type="string" db:index="2" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_CHANGE_SOURCE" type="decimal" db:index="3" db:default="true" db:type="NUMBER" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_DERIVE_PERSON_PARTY_ID.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/derive_person_party_id/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/derive_person_party_id/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="USER_NAME" type="string" db:index="1" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="CUSTOMER_ID" type="decimal" db:index="2" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="EMPLOYEE_ID" type="decimal" db:index="3" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="LOG_EXCEPTION" type="string" db:index="4" db:default="true" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="OutputParameters">
+    <complexType>
+      <sequence>
+        <element name="DERIVE_PERSON_PARTY_ID" type="decimal" db:index="0" db:type="NUMBER" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_FORM_LDAP_WRAPPER_UPDATE_USER.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/form_ldap_wrapper_update_user/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/form_ldap_wrapper_update_user/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="X_USER_NAME" type="string" db:index="1" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_UNENCRYPTED_PASSWORD" type="string" db:index="2" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_START_DATE" type="dateTime" db:index="3" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="X_END_DATE" type="dateTime" db:index="4" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="X_DESCRIPTION" type="string" db:index="5" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_EMAIL_ADDRESS" type="string" db:index="6" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_FAX" type="string" db:index="7" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_OUT_PWD" type="string" db:index="8" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="OutputParameters">
+    <complexType>
+      <sequence>
+        <element name="X_OUT_PWD" type="string" db:index="8" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_LDAP_WRAPPER_CHANGE_USER_NAME.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrapper_change_user_name/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrapper_change_user_name/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="X_OLD_USER_NAME" type="string" db:index="1" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_NEW_USER_NAME" type="string" db:index="2" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_LDAP_WRAPPER_CREATE_USER.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrapper_create_user/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrapper_create_user/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="X_USER_NAME" type="string" db:index="1" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_UNENCRYPTED_PASSWORD" type="string" db:index="2" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_START_DATE" type="dateTime" db:index="3" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="X_END_DATE" type="dateTime" db:index="4" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="X_DESCRIPTION" type="string" db:index="5" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_EMAIL_ADDRESS" type="string" db:index="6" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_FAX" type="string" db:index="7" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_EXPIRE_PWD" type="int" db:index="8" db:default="true" db:type="PLS_INTEGER" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_LDAP_WRAPPER_UPDATE_USER.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrapper_update_user/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrapper_update_user/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="X_USER_NAME" type="string" db:index="1" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_UNENCRYPTED_PASSWORD" type="string" db:index="2" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_START_DATE" type="dateTime" db:index="3" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="X_END_DATE" type="dateTime" db:index="4" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="X_DESCRIPTION" type="string" db:index="5" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_EMAIL_ADDRESS" type="string" db:index="6" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_FAX" type="string" db:index="7" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_EXPIRE_PWD" type="int" db:index="8" db:default="true" db:type="PLS_INTEGER" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_LDAP_WRP_UPDATE_USER_LOADER.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrp_update_user_loader/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrp_update_user_loader/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="X_USER_NAME" type="string" db:index="1" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_HASHED_PASSWORD" type="string" db:index="2" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_START_DATE" type="dateTime" db:index="3" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="X_END_DATE" type="dateTime" db:index="4" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="X_DESCRIPTION" type="string" db:index="5" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_EMAIL_ADDRESS" type="string" db:index="6" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_FAX" type="string" db:index="7" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_EXPIRE_PWD" type="int" db:index="8" db:default="true" db:type="PLS_INTEGER" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_LOAD_ROW.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/load_row/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/load_row/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="X_USER_NAME" type="string" db:index="1" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_OWNER" type="string" db:index="2" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_ENCRYPTED_USER_PASSWORD" type="string" db:index="3" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_SESSION_NUMBER" type="string" db:index="4" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_START_DATE" type="string" db:index="5" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_END_DATE" type="string" db:index="6" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_LAST_LOGON_DATE" type="string" db:index="7" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_DESCRIPTION" type="string" db:index="8" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_PASSWORD_DATE" type="string" db:index="9" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_PASSWORD_ACCESSES_LEFT" type="string" db:index="10" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_PASSWORD_LIFESPAN_ACCESSES" type="string" db:index="11" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_PASSWORD_LIFESPAN_DAYS" type="string" db:index="12" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_EMAIL_ADDRESS" type="string" db:index="13" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_FAX" type="string" db:index="14" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_CUSTOM_MODE" type="string" db:index="15" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_LAST_UPDATE_DATE" type="string" db:index="16" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="X_PERSON_PARTY_NAME" type="string" db:index="17" db:default="true" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_SET_OLD_PERSON_PARTY_ID.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/set_old_person_party_id/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/set_old_person_party_id/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="X_OLD_PERSON_PARTY_ID" type="string" db:index="1" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="OutputParameters">
+    <complexType>
+      <sequence>
+        <element name="SET_OLD_PERSON_PARTY_ID" type="decimal" db:index="0" db:type="NUMBER" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_SET_OLD_USER_GUID.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/set_old_user_guid/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/set_old_user_guid/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="X_OLD_USER_GUID" type="base64Binary" db:index="1" db:type="RAW" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="OutputParameters">
+    <complexType>
+      <sequence>
+        <element name="SET_OLD_USER_GUID" type="decimal" db:index="0" db:type="NUMBER" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_TESTUSERNAME.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/testusername/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/testusername/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="X_USER_NAME" type="string" db:index="1" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="OutputParameters">
+    <complexType>
+      <sequence>
+        <element name="TESTUSERNAME" type="int" db:index="0" db:type="PLS_INTEGER" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/APPS_FND_USER_PKG_VALIDATE_USER_NAME.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/validate_user_name/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/validate_user_name/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="X_USER_NAME" type="string" db:index="1" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/" name="CHANGE_USER_NAME" bindingOperationName="CHANGE_USER_NAME" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fnd="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/" xmlns:chan="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/change_user_name/">
+   <soapenv:Header>
+      <fnd:SOAHeader>
+         <!--Optional:-->
+         <fnd:Responsibility>?</fnd:Responsibility>
+         <!--Optional:-->
+         <fnd:RespApplication>?</fnd:RespApplication>
+         <!--Optional:-->
+         <fnd:SecurityGroup>?</fnd:SecurityGroup>
+         <!--Optional:-->
+         <fnd:NLSLanguage>?</fnd:NLSLanguage>
+         <!--Optional:-->
+         <fnd:Org_Id>?</fnd:Org_Id>
+      </fnd:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <chan:InputParameters>
+         <!--Optional:-->
+         <chan:X_OLD_USER_NAME>?</chan:X_OLD_USER_NAME>
+         <!--Optional:-->
+         <chan:X_NEW_USER_NAME>?</chan:X_NEW_USER_NAME>
+         <!--Optional:-->
+         <chan:X_CHANGE_SOURCE>?</chan:X_CHANGE_SOURCE>
+      </chan:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/></con:call></con:operation><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/" name="DERIVE_PERSON_PARTY_ID" bindingOperationName="DERIVE_PERSON_PARTY_ID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fnd="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/" xmlns:der="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/derive_person_party_id/">
+   <soapenv:Header>
+      <fnd:SOAHeader>
+         <!--Optional:-->
+         <fnd:Responsibility>?</fnd:Responsibility>
+         <!--Optional:-->
+         <fnd:RespApplication>?</fnd:RespApplication>
+         <!--Optional:-->
+         <fnd:SecurityGroup>?</fnd:SecurityGroup>
+         <!--Optional:-->
+         <fnd:NLSLanguage>?</fnd:NLSLanguage>
+         <!--Optional:-->
+         <fnd:Org_Id>?</fnd:Org_Id>
+      </fnd:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <der:InputParameters>
+         <!--Optional:-->
+         <der:USER_NAME>?</der:USER_NAME>
+         <!--Optional:-->
+         <der:CUSTOMER_ID>?</der:CUSTOMER_ID>
+         <!--Optional:-->
+         <der:EMPLOYEE_ID>?</der:EMPLOYEE_ID>
+         <!--Optional:-->
+         <der:LOG_EXCEPTION>?</der:LOG_EXCEPTION>
+      </der:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/></con:call></con:operation><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/" name="FORM_LDAP_WRAPPER_UPDATE_USER" bindingOperationName="FORM_LDAP_WRAPPER_UPDATE_USER" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fnd="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/" xmlns:form="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/form_ldap_wrapper_update_user/">
+   <soapenv:Header>
+      <fnd:SOAHeader>
+         <!--Optional:-->
+         <fnd:Responsibility>?</fnd:Responsibility>
+         <!--Optional:-->
+         <fnd:RespApplication>?</fnd:RespApplication>
+         <!--Optional:-->
+         <fnd:SecurityGroup>?</fnd:SecurityGroup>
+         <!--Optional:-->
+         <fnd:NLSLanguage>?</fnd:NLSLanguage>
+         <!--Optional:-->
+         <fnd:Org_Id>?</fnd:Org_Id>
+      </fnd:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <form:InputParameters>
+         <!--Optional:-->
+         <form:X_USER_NAME>?</form:X_USER_NAME>
+         <!--Optional:-->
+         <form:X_UNENCRYPTED_PASSWORD>?</form:X_UNENCRYPTED_PASSWORD>
+         <!--Optional:-->
+         <form:X_START_DATE>?</form:X_START_DATE>
+         <!--Optional:-->
+         <form:X_END_DATE>?</form:X_END_DATE>
+         <!--Optional:-->
+         <form:X_DESCRIPTION>?</form:X_DESCRIPTION>
+         <!--Optional:-->
+         <form:X_EMAIL_ADDRESS>?</form:X_EMAIL_ADDRESS>
+         <!--Optional:-->
+         <form:X_FAX>?</form:X_FAX>
+         <!--Optional:-->
+         <form:X_OUT_PWD>?</form:X_OUT_PWD>
+      </form:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/></con:call></con:operation><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/" name="LDAP_WRAPPER_CHANGE_USER_NAME" bindingOperationName="LDAP_WRAPPER_CHANGE_USER_NAME" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fnd="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/" xmlns:ldap="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrapper_change_user_name/">
+   <soapenv:Header>
+      <fnd:SOAHeader>
+         <!--Optional:-->
+         <fnd:Responsibility>?</fnd:Responsibility>
+         <!--Optional:-->
+         <fnd:RespApplication>?</fnd:RespApplication>
+         <!--Optional:-->
+         <fnd:SecurityGroup>?</fnd:SecurityGroup>
+         <!--Optional:-->
+         <fnd:NLSLanguage>?</fnd:NLSLanguage>
+         <!--Optional:-->
+         <fnd:Org_Id>?</fnd:Org_Id>
+      </fnd:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ldap:InputParameters>
+         <!--Optional:-->
+         <ldap:X_OLD_USER_NAME>?</ldap:X_OLD_USER_NAME>
+         <!--Optional:-->
+         <ldap:X_NEW_USER_NAME>?</ldap:X_NEW_USER_NAME>
+      </ldap:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/></con:call></con:operation><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/" name="LDAP_WRAPPER_CREATE_USER" bindingOperationName="LDAP_WRAPPER_CREATE_USER" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fnd="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/" xmlns:ldap="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrapper_create_user/">
+   <soapenv:Header>
+      <fnd:SOAHeader>
+         <!--Optional:-->
+         <fnd:Responsibility>?</fnd:Responsibility>
+         <!--Optional:-->
+         <fnd:RespApplication>?</fnd:RespApplication>
+         <!--Optional:-->
+         <fnd:SecurityGroup>?</fnd:SecurityGroup>
+         <!--Optional:-->
+         <fnd:NLSLanguage>?</fnd:NLSLanguage>
+         <!--Optional:-->
+         <fnd:Org_Id>?</fnd:Org_Id>
+      </fnd:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ldap:InputParameters>
+         <!--Optional:-->
+         <ldap:X_USER_NAME>?</ldap:X_USER_NAME>
+         <!--Optional:-->
+         <ldap:X_UNENCRYPTED_PASSWORD>?</ldap:X_UNENCRYPTED_PASSWORD>
+         <!--Optional:-->
+         <ldap:X_START_DATE>?</ldap:X_START_DATE>
+         <!--Optional:-->
+         <ldap:X_END_DATE>?</ldap:X_END_DATE>
+         <!--Optional:-->
+         <ldap:X_DESCRIPTION>?</ldap:X_DESCRIPTION>
+         <!--Optional:-->
+         <ldap:X_EMAIL_ADDRESS>?</ldap:X_EMAIL_ADDRESS>
+         <!--Optional:-->
+         <ldap:X_FAX>?</ldap:X_FAX>
+         <!--Optional:-->
+         <ldap:X_EXPIRE_PWD>?</ldap:X_EXPIRE_PWD>
+      </ldap:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/></con:call></con:operation><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/" name="LDAP_WRAPPER_UPDATE_USER" bindingOperationName="LDAP_WRAPPER_UPDATE_USER" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fnd="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/" xmlns:ldap="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrapper_update_user/">
+   <soapenv:Header>
+      <fnd:SOAHeader>
+         <!--Optional:-->
+         <fnd:Responsibility>?</fnd:Responsibility>
+         <!--Optional:-->
+         <fnd:RespApplication>?</fnd:RespApplication>
+         <!--Optional:-->
+         <fnd:SecurityGroup>?</fnd:SecurityGroup>
+         <!--Optional:-->
+         <fnd:NLSLanguage>?</fnd:NLSLanguage>
+         <!--Optional:-->
+         <fnd:Org_Id>?</fnd:Org_Id>
+      </fnd:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ldap:InputParameters>
+         <!--Optional:-->
+         <ldap:X_USER_NAME>?</ldap:X_USER_NAME>
+         <!--Optional:-->
+         <ldap:X_UNENCRYPTED_PASSWORD>?</ldap:X_UNENCRYPTED_PASSWORD>
+         <!--Optional:-->
+         <ldap:X_START_DATE>?</ldap:X_START_DATE>
+         <!--Optional:-->
+         <ldap:X_END_DATE>?</ldap:X_END_DATE>
+         <!--Optional:-->
+         <ldap:X_DESCRIPTION>?</ldap:X_DESCRIPTION>
+         <!--Optional:-->
+         <ldap:X_EMAIL_ADDRESS>?</ldap:X_EMAIL_ADDRESS>
+         <!--Optional:-->
+         <ldap:X_FAX>?</ldap:X_FAX>
+         <!--Optional:-->
+         <ldap:X_EXPIRE_PWD>?</ldap:X_EXPIRE_PWD>
+      </ldap:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/></con:call></con:operation><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/" name="LDAP_WRP_UPDATE_USER_LOADER" bindingOperationName="LDAP_WRP_UPDATE_USER_LOADER" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fnd="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/" xmlns:ldap="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/ldap_wrp_update_user_loader/">
+   <soapenv:Header>
+      <fnd:SOAHeader>
+         <!--Optional:-->
+         <fnd:Responsibility>?</fnd:Responsibility>
+         <!--Optional:-->
+         <fnd:RespApplication>?</fnd:RespApplication>
+         <!--Optional:-->
+         <fnd:SecurityGroup>?</fnd:SecurityGroup>
+         <!--Optional:-->
+         <fnd:NLSLanguage>?</fnd:NLSLanguage>
+         <!--Optional:-->
+         <fnd:Org_Id>?</fnd:Org_Id>
+      </fnd:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ldap:InputParameters>
+         <!--Optional:-->
+         <ldap:X_USER_NAME>?</ldap:X_USER_NAME>
+         <!--Optional:-->
+         <ldap:X_HASHED_PASSWORD>?</ldap:X_HASHED_PASSWORD>
+         <!--Optional:-->
+         <ldap:X_START_DATE>?</ldap:X_START_DATE>
+         <!--Optional:-->
+         <ldap:X_END_DATE>?</ldap:X_END_DATE>
+         <!--Optional:-->
+         <ldap:X_DESCRIPTION>?</ldap:X_DESCRIPTION>
+         <!--Optional:-->
+         <ldap:X_EMAIL_ADDRESS>?</ldap:X_EMAIL_ADDRESS>
+         <!--Optional:-->
+         <ldap:X_FAX>?</ldap:X_FAX>
+         <!--Optional:-->
+         <ldap:X_EXPIRE_PWD>?</ldap:X_EXPIRE_PWD>
+      </ldap:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/></con:call></con:operation><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/" name="LOAD_ROW" bindingOperationName="LOAD_ROW" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fnd="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/" xmlns:load="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/load_row/">
+   <soapenv:Header>
+      <fnd:SOAHeader>
+         <!--Optional:-->
+         <fnd:Responsibility>?</fnd:Responsibility>
+         <!--Optional:-->
+         <fnd:RespApplication>?</fnd:RespApplication>
+         <!--Optional:-->
+         <fnd:SecurityGroup>?</fnd:SecurityGroup>
+         <!--Optional:-->
+         <fnd:NLSLanguage>?</fnd:NLSLanguage>
+         <!--Optional:-->
+         <fnd:Org_Id>?</fnd:Org_Id>
+      </fnd:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <load:InputParameters>
+         <!--Optional:-->
+         <load:X_USER_NAME>?</load:X_USER_NAME>
+         <!--Optional:-->
+         <load:X_OWNER>?</load:X_OWNER>
+         <!--Optional:-->
+         <load:X_ENCRYPTED_USER_PASSWORD>?</load:X_ENCRYPTED_USER_PASSWORD>
+         <!--Optional:-->
+         <load:X_SESSION_NUMBER>?</load:X_SESSION_NUMBER>
+         <!--Optional:-->
+         <load:X_START_DATE>?</load:X_START_DATE>
+         <!--Optional:-->
+         <load:X_END_DATE>?</load:X_END_DATE>
+         <!--Optional:-->
+         <load:X_LAST_LOGON_DATE>?</load:X_LAST_LOGON_DATE>
+         <!--Optional:-->
+         <load:X_DESCRIPTION>?</load:X_DESCRIPTION>
+         <!--Optional:-->
+         <load:X_PASSWORD_DATE>?</load:X_PASSWORD_DATE>
+         <!--Optional:-->
+         <load:X_PASSWORD_ACCESSES_LEFT>?</load:X_PASSWORD_ACCESSES_LEFT>
+         <!--Optional:-->
+         <load:X_PASSWORD_LIFESPAN_ACCESSES>?</load:X_PASSWORD_LIFESPAN_ACCESSES>
+         <!--Optional:-->
+         <load:X_PASSWORD_LIFESPAN_DAYS>?</load:X_PASSWORD_LIFESPAN_DAYS>
+         <!--Optional:-->
+         <load:X_EMAIL_ADDRESS>?</load:X_EMAIL_ADDRESS>
+         <!--Optional:-->
+         <load:X_FAX>?</load:X_FAX>
+         <!--Optional:-->
+         <load:X_CUSTOM_MODE>?</load:X_CUSTOM_MODE>
+         <!--Optional:-->
+         <load:X_LAST_UPDATE_DATE>?</load:X_LAST_UPDATE_DATE>
+         <!--Optional:-->
+         <load:X_PERSON_PARTY_NAME>?</load:X_PERSON_PARTY_NAME>
+      </load:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/></con:call></con:operation><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/" name="SET_OLD_PERSON_PARTY_ID" bindingOperationName="SET_OLD_PERSON_PARTY_ID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fnd="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/" xmlns:set="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/set_old_person_party_id/">
+   <soapenv:Header>
+      <fnd:SOAHeader>
+         <!--Optional:-->
+         <fnd:Responsibility>?</fnd:Responsibility>
+         <!--Optional:-->
+         <fnd:RespApplication>?</fnd:RespApplication>
+         <!--Optional:-->
+         <fnd:SecurityGroup>?</fnd:SecurityGroup>
+         <!--Optional:-->
+         <fnd:NLSLanguage>?</fnd:NLSLanguage>
+         <!--Optional:-->
+         <fnd:Org_Id>?</fnd:Org_Id>
+      </fnd:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <set:InputParameters>
+         <!--Optional:-->
+         <set:X_OLD_PERSON_PARTY_ID>?</set:X_OLD_PERSON_PARTY_ID>
+      </set:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/></con:call></con:operation><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/" name="SET_OLD_USER_GUID" bindingOperationName="SET_OLD_USER_GUID" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fnd="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/" xmlns:set="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/set_old_user_guid/">
+   <soapenv:Header>
+      <fnd:SOAHeader>
+         <!--Optional:-->
+         <fnd:Responsibility>?</fnd:Responsibility>
+         <!--Optional:-->
+         <fnd:RespApplication>?</fnd:RespApplication>
+         <!--Optional:-->
+         <fnd:SecurityGroup>?</fnd:SecurityGroup>
+         <!--Optional:-->
+         <fnd:NLSLanguage>?</fnd:NLSLanguage>
+         <!--Optional:-->
+         <fnd:Org_Id>?</fnd:Org_Id>
+      </fnd:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <set:InputParameters>
+         <!--Optional:-->
+         <set:X_OLD_USER_GUID>cid:1293481926699</set:X_OLD_USER_GUID>
+      </set:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/></con:call></con:operation><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/" name="TESTUSERNAME" bindingOperationName="TESTUSERNAME" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fnd="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/" xmlns:tes="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/testusername/">
+   <soapenv:Header>
+      <fnd:SOAHeader>
+         <!--Optional:-->
+         <fnd:Responsibility>SYSTEM_ADMINISTRATOR</fnd:Responsibility>
+         <!--Optional:-->
+         <fnd:RespApplication>SYSADMIN</fnd:RespApplication>
+         <!--Optional:-->
+         <fnd:SecurityGroup>STANDARD</fnd:SecurityGroup>
+         <!--Optional:-->
+         <fnd:NLSLanguage>AMERICAN</fnd:NLSLanguage>
+         <!--Optional:-->
+         <fnd:Org_Id>0</fnd:Org_Id>
+      </fnd:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <tes:InputParameters>
+         <!--Optional:-->
+         <tes:X_USER_NAME>OPERATIONS</tes:X_USER_NAME>
+      </tes:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>OPERATIONS</con:username><con:password>welcome</con:password></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/" name="VALIDATE_USER_NAME" bindingOperationName="VALIDATE_USER_NAME" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fnd="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/" xmlns:val="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_user_pkg/validate_user_name/">
+   <soapenv:Header>
+      <fnd:SOAHeader>
+         <!--Optional:-->
+         <fnd:Responsibility>SYSTEM_ADMINISTRATOR</fnd:Responsibility>
+         <!--Optional:-->
+         <fnd:RespApplication>SYSADMIN</fnd:RespApplication>
+         <!--Optional:-->
+         <fnd:SecurityGroup>STANDARD</fnd:SecurityGroup>
+         <!--Optional:-->
+         <fnd:NLSLanguage>AMERICAN</fnd:NLSLanguage>
+         <!--Optional:-->
+         <fnd:Org_Id>0</fnd:Org_Id>
+      </fnd:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <val:InputParameters>
+         <!--Optional:-->
+         <val:X_USER_NAME>OPERATIONS</val:X_USER_NAME>
+      </val:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>OPERATIONS</con:username><con:password>welcome</con:password></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_user_pkg/"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="HR_PERSON_ABSENCE_API_Binding" type="wsdl" bindingName="{http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/}HR_PERSON_ABSENCE_API_Binding" soapVersion="1_1" anonymous="optional" definition="http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/?WSDL"><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/?WSDL</con:url><con:content><![CDATA[<definitions name="HR_PERSON_ABSENCE_API" targetNamespace="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/" xmlns:tns="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns1="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/create_person_absence/" xmlns:tns2="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/delete_person_absence/" xmlns:tns3="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/update_person_absence/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/create_person_absence/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/APPS_ISG_CREATE_PERSON_ABSENCE_HR_PERSON_ABSENCE_API-24CREATE1.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/delete_person_absence/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/APPS_ISG_DELETE_PERSON_ABSENCE_HR_PERSON_ABSENCE_API-24DELETE2.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/update_person_absence/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/APPS_ISG_UPDATE_PERSON_ABSENCE_HR_PERSON_ABSENCE_API-24UPDATE3.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="SOAHeader">
+        <complexType>
+          <sequence>
+            <element name="Responsibility" minOccurs="0" type="string"/>
+            <element name="RespApplication" minOccurs="0" type="string"/>
+            <element name="SecurityGroup" minOccurs="0" type="string"/>
+            <element name="NLSLanguage" minOccurs="0" type="string"/>
+            <element name="Org_Id" minOccurs="0" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="CREATE_PERSON_ABSENCE_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns1:InputParameters"/>
+  </message>
+  <message name="CREATE_PERSON_ABSENCE_Output_Msg">
+    <part name="body" element="tns1:OutputParameters"/>
+  </message>
+  <message name="DELETE_PERSON_ABSENCE_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns2:InputParameters"/>
+  </message>
+  <message name="UPDATE_PERSON_ABSENCE_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns3:InputParameters"/>
+  </message>
+  <message name="UPDATE_PERSON_ABSENCE_Output_Msg">
+    <part name="body" element="tns3:OutputParameters"/>
+  </message>
+  <portType name="HR_PERSON_ABSENCE_API_PortType">
+    <operation name="CREATE_PERSON_ABSENCE">
+      <input message="tns:CREATE_PERSON_ABSENCE_Input_Msg"/>
+      <output message="tns:CREATE_PERSON_ABSENCE_Output_Msg"/>
+    </operation>
+    <operation name="DELETE_PERSON_ABSENCE">
+      <input message="tns:DELETE_PERSON_ABSENCE_Input_Msg"/>
+    </operation>
+    <operation name="UPDATE_PERSON_ABSENCE">
+      <input message="tns:UPDATE_PERSON_ABSENCE_Input_Msg"/>
+      <output message="tns:UPDATE_PERSON_ABSENCE_Output_Msg"/>
+    </operation>
+  </portType>
+  <binding name="HR_PERSON_ABSENCE_API_Binding" type="tns:HR_PERSON_ABSENCE_API_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="CREATE_PERSON_ABSENCE">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/"/>
+      <input>
+        <soap:header message="tns:CREATE_PERSON_ABSENCE_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="DELETE_PERSON_ABSENCE">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/"/>
+      <input>
+        <soap:header message="tns:DELETE_PERSON_ABSENCE_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+    </operation>
+    <operation name="UPDATE_PERSON_ABSENCE">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/"/>
+      <input>
+        <soap:header message="tns:UPDATE_PERSON_ABSENCE_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="HR_PERSON_ABSENCE_API_Service">
+    <port name="HR_PERSON_ABSENCE_API_Port" binding="tns:HR_PERSON_ABSENCE_API_Binding">
+      <soap:address location="http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/APPS_ISG_CREATE_PERSON_ABSENCE_HR_PERSON_ABSENCE_API-24CREATE1.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/create_person_absence/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/create_person_absence/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="P_VALIDATE" type="int" db:index="1" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_EFFECTIVE_DATE" type="dateTime" db:index="2" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_PERSON_ID" type="decimal" db:index="3" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_BUSINESS_GROUP_ID" type="decimal" db:index="4" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_ABSENCE_ATTENDANCE_TYPE_ID" type="decimal" db:index="5" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_ATTENDANCE_REASON_ID" type="decimal" db:index="6" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_COMMENTS" type="string" db:index="7" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_DATE_NOTIFICATION" type="dateTime" db:index="8" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_DATE_PROJECTED_START" type="dateTime" db:index="9" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_TIME_PROJECTED_START" type="string" db:index="10" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_DATE_PROJECTED_END" type="dateTime" db:index="11" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_TIME_PROJECTED_END" type="string" db:index="12" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_DATE_START" type="dateTime" db:index="13" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_TIME_START" type="string" db:index="14" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_DATE_END" type="dateTime" db:index="15" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_TIME_END" type="string" db:index="16" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABSENCE_DAYS" type="decimal" db:index="17" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_ABSENCE_HOURS" type="decimal" db:index="18" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_AUTHORISING_PERSON_ID" type="decimal" db:index="19" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_REPLACEMENT_PERSON_ID" type="decimal" db:index="20" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE_CATEGORY" type="string" db:index="21" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE1" type="string" db:index="22" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE2" type="string" db:index="23" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE3" type="string" db:index="24" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE4" type="string" db:index="25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE5" type="string" db:index="26" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE6" type="string" db:index="27" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE7" type="string" db:index="28" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE8" type="string" db:index="29" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE9" type="string" db:index="30" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE10" type="string" db:index="31" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE11" type="string" db:index="32" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE12" type="string" db:index="33" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE13" type="string" db:index="34" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE14" type="string" db:index="35" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE15" type="string" db:index="36" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE16" type="string" db:index="37" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE17" type="string" db:index="38" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE18" type="string" db:index="39" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE19" type="string" db:index="40" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE20" type="string" db:index="41" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_PERIOD_OF_INCAPACITY_ID" type="decimal" db:index="42" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_SSP1_ISSUED" type="string" db:index="43" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_MATERNITY_ID" type="decimal" db:index="44" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_SICKNESS_START_DATE" type="dateTime" db:index="45" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_SICKNESS_END_DATE" type="dateTime" db:index="46" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_PREGNANCY_RELATED_ILLNESS" type="string" db:index="47" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_REASON_FOR_NOTIFICATION_DELA" type="string" db:index="48" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ACCEPT_LATE_NOTIFICATION_FLA" type="string" db:index="49" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_LINKED_ABSENCE_ID" type="decimal" db:index="50" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_BATCH_ID" type="decimal" db:index="51" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_CREATE_ELEMENT_ENTRY" type="int" db:index="52" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION_CATEGORY" type="string" db:index="53" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION1" type="string" db:index="54" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION2" type="string" db:index="55" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION3" type="string" db:index="56" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION4" type="string" db:index="57" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION5" type="string" db:index="58" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION6" type="string" db:index="59" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION7" type="string" db:index="60" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION8" type="string" db:index="61" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION9" type="string" db:index="62" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION10" type="string" db:index="63" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION11" type="string" db:index="64" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION12" type="string" db:index="65" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION13" type="string" db:index="66" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION14" type="string" db:index="67" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION15" type="string" db:index="68" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION16" type="string" db:index="69" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION17" type="string" db:index="70" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION18" type="string" db:index="71" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION19" type="string" db:index="72" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION20" type="string" db:index="73" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION21" type="string" db:index="74" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION22" type="string" db:index="75" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION23" type="string" db:index="76" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION24" type="string" db:index="77" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION25" type="string" db:index="78" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION26" type="string" db:index="79" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION27" type="string" db:index="80" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION28" type="string" db:index="81" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION29" type="string" db:index="82" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION30" type="string" db:index="83" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABSENCE_CASE_ID" type="decimal" db:index="84" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_PROGRAM_APPLICATION_ID" type="decimal" db:index="85" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_CALLED_FROM" type="decimal" db:index="86" db:type="NUMBER" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="OutputParameters">
+    <complexType>
+      <sequence>
+        <element name="P_ABSENCE_DAYS" type="decimal" db:index="17" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_ABSENCE_HOURS" type="decimal" db:index="18" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_ABSENCE_ATTENDANCE_ID" type="decimal" db:index="87" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_OBJECT_VERSION_NUMBER" type="decimal" db:index="88" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_OCCURRENCE" type="decimal" db:index="89" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_DUR_DYS_LESS_WARNING" type="int" db:index="90" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_DUR_HRS_LESS_WARNING" type="int" db:index="91" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_EXCEEDS_PTO_ENTIT_WARNING" type="int" db:index="92" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_EXCEEDS_RUN_TOTAL_WARNING" type="int" db:index="93" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_OVERLAP_WARNING" type="int" db:index="94" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_DAY_AFTER_WARNING" type="int" db:index="95" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_DUR_OVERWRITTEN_WARNING" type="int" db:index="96" db:type="INTEGER" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/APPS_ISG_DELETE_PERSON_ABSENCE_HR_PERSON_ABSENCE_API-24DELETE2.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/delete_person_absence/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/delete_person_absence/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="P_VALIDATE" type="int" db:index="1" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_ABSENCE_ATTENDANCE_ID" type="decimal" db:index="2" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_OBJECT_VERSION_NUMBER" type="decimal" db:index="3" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_CALLED_FROM" type="decimal" db:index="4" db:type="NUMBER" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/APPS_ISG_UPDATE_PERSON_ABSENCE_HR_PERSON_ABSENCE_API-24UPDATE3.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/update_person_absence/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/update_person_absence/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="P_VALIDATE" type="int" db:index="1" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_EFFECTIVE_DATE" type="dateTime" db:index="2" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_ABSENCE_ATTENDANCE_ID" type="decimal" db:index="3" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_ATTENDANCE_REASON_ID" type="decimal" db:index="4" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_COMMENTS" type="string" db:index="5" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_DATE_NOTIFICATION" type="dateTime" db:index="6" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_DATE_PROJECTED_START" type="dateTime" db:index="7" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_TIME_PROJECTED_START" type="string" db:index="8" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_DATE_PROJECTED_END" type="dateTime" db:index="9" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_TIME_PROJECTED_END" type="string" db:index="10" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_DATE_START" type="dateTime" db:index="11" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_TIME_START" type="string" db:index="12" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_DATE_END" type="dateTime" db:index="13" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_TIME_END" type="string" db:index="14" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABSENCE_DAYS" type="decimal" db:index="15" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_ABSENCE_HOURS" type="decimal" db:index="16" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_AUTHORISING_PERSON_ID" type="decimal" db:index="17" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_REPLACEMENT_PERSON_ID" type="decimal" db:index="18" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE_CATEGORY" type="string" db:index="19" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE1" type="string" db:index="20" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE2" type="string" db:index="21" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE3" type="string" db:index="22" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE4" type="string" db:index="23" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE5" type="string" db:index="24" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE6" type="string" db:index="25" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE7" type="string" db:index="26" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE8" type="string" db:index="27" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE9" type="string" db:index="28" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE10" type="string" db:index="29" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE11" type="string" db:index="30" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE12" type="string" db:index="31" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE13" type="string" db:index="32" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE14" type="string" db:index="33" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE15" type="string" db:index="34" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE16" type="string" db:index="35" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE17" type="string" db:index="36" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE18" type="string" db:index="37" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE19" type="string" db:index="38" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ATTRIBUTE20" type="string" db:index="39" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_PERIOD_OF_INCAPACITY_ID" type="decimal" db:index="40" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_SSP1_ISSUED" type="string" db:index="41" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_MATERNITY_ID" type="decimal" db:index="42" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_SICKNESS_START_DATE" type="dateTime" db:index="43" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_SICKNESS_END_DATE" type="dateTime" db:index="44" db:type="DATE" minOccurs="0" nillable="true"/>
+        <element name="P_PREGNANCY_RELATED_ILLNESS" type="string" db:index="45" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_REASON_FOR_NOTIFICATION_DELA" type="string" db:index="46" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ACCEPT_LATE_NOTIFICATION_FLA" type="string" db:index="47" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_LINKED_ABSENCE_ID" type="decimal" db:index="48" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_BATCH_ID" type="decimal" db:index="49" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION_CATEGORY" type="string" db:index="50" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION1" type="string" db:index="51" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION2" type="string" db:index="52" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION3" type="string" db:index="53" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION4" type="string" db:index="54" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION5" type="string" db:index="55" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION6" type="string" db:index="56" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION7" type="string" db:index="57" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION8" type="string" db:index="58" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION9" type="string" db:index="59" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION10" type="string" db:index="60" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION11" type="string" db:index="61" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION12" type="string" db:index="62" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION13" type="string" db:index="63" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION14" type="string" db:index="64" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION15" type="string" db:index="65" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION16" type="string" db:index="66" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION17" type="string" db:index="67" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION18" type="string" db:index="68" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION19" type="string" db:index="69" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION20" type="string" db:index="70" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION21" type="string" db:index="71" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION22" type="string" db:index="72" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION23" type="string" db:index="73" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION24" type="string" db:index="74" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION25" type="string" db:index="75" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION26" type="string" db:index="76" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION27" type="string" db:index="77" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION28" type="string" db:index="78" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION29" type="string" db:index="79" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_INFORMATION30" type="string" db:index="80" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_ABSENCE_CASE_ID" type="decimal" db:index="81" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_PROGRAM_APPLICATION_ID" type="decimal" db:index="82" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_CALLED_FROM" type="decimal" db:index="83" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_OBJECT_VERSION_NUMBER" type="decimal" db:index="84" db:type="NUMBER" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="OutputParameters">
+    <complexType>
+      <sequence>
+        <element name="P_ABSENCE_DAYS" type="decimal" db:index="15" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_ABSENCE_HOURS" type="decimal" db:index="16" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_OBJECT_VERSION_NUMBER" type="decimal" db:index="84" db:type="NUMBER" minOccurs="0" nillable="true"/>
+        <element name="P_DUR_DYS_LESS_WARNING" type="int" db:index="85" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_DUR_HRS_LESS_WARNING" type="int" db:index="86" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_EXCEEDS_PTO_ENTIT_WARNING" type="int" db:index="87" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_EXCEEDS_RUN_TOTAL_WARNING" type="int" db:index="88" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_OVERLAP_WARNING" type="int" db:index="89" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_ABS_DAY_AFTER_WARNING" type="int" db:index="90" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_DUR_OVERWRITTEN_WARNING" type="int" db:index="91" db:type="INTEGER" minOccurs="0" nillable="true"/>
+        <element name="P_DEL_ELEMENT_ENTRY_WARNING" type="int" db:index="92" db:type="INTEGER" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/" name="CREATE_PERSON_ABSENCE" bindingOperationName="CREATE_PERSON_ABSENCE" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hr="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/" xmlns:cre="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/create_person_absence/">
+   <soapenv:Header>
+      <hr:SOAHeader>
+         <!--Optional:-->
+         <hr:Responsibility>SA_HRMS_MANAGER</hr:Responsibility>
+         <!--Optional:-->
+         <hr:RespApplication>PER</hr:RespApplication>
+         <!--Optional:-->
+         <hr:SecurityGroup>STANDARD</hr:SecurityGroup>
+         <!--Optional:-->
+         <hr:NLSLanguage>AMERICAN</hr:NLSLanguage>
+         <!--Optional:-->
+         <hr:Org_Id>0</hr:Org_Id>
+      </hr:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <cre:InputParameters>
+         <!--Optional:-->
+         <cre:P_VALIDATE>0</cre:P_VALIDATE>
+         <!--Optional:-->
+         <cre:P_EFFECTIVE_DATE>2015-03-02T00:00:00</cre:P_EFFECTIVE_DATE>
+         <!--Optional:-->
+         <cre:P_PERSON_ID>18701</cre:P_PERSON_ID>
+         <!--Optional:-->
+         <cre:P_BUSINESS_GROUP_ID>5461</cre:P_BUSINESS_GROUP_ID>
+         <!--Optional:-->
+         <cre:P_ABSENCE_ATTENDANCE_TYPE_ID>932</cre:P_ABSENCE_ATTENDANCE_TYPE_ID>
+         <!--Optional:-->
+         <cre:P_ABS_ATTENDANCE_REASON_ID/>
+         <!--Optional:-->
+         <cre:P_COMMENTS/>
+         <!--Optional:-->
+         <cre:P_DATE_NOTIFICATION/>
+         <!--Optional:-->
+         <cre:P_DATE_PROJECTED_START/>
+         <!--Optional:-->
+         <cre:P_TIME_PROJECTED_START/>
+         <!--Optional:-->
+         <cre:P_DATE_PROJECTED_END/>
+         <!--Optional:-->
+         <cre:P_TIME_PROJECTED_END/>
+         <!--Optional:-->
+         <cre:P_DATE_START>2015-03-02T00:00:00</cre:P_DATE_START>
+         <!--Optional:-->
+         <cre:P_TIME_START/>
+         <!--Optional:-->
+         <cre:P_DATE_END>2015-03-02T00:00:00</cre:P_DATE_END>
+         <!--Optional:-->
+         <cre:P_TIME_END/>
+         <!--Optional:-->
+         <cre:P_ABSENCE_DAYS>1</cre:P_ABSENCE_DAYS>
+         <!--Optional:-->
+         <cre:P_ABSENCE_HOURS/>
+         <!--Optional:-->
+         <cre:P_AUTHORISING_PERSON_ID/>
+         <!--Optional:-->
+         <cre:P_REPLACEMENT_PERSON_ID/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE_CATEGORY/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE1/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE2/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE3/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE4/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE5/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE6/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE7/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE8/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE9/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE10/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE11/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE12/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE13/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE14/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE15/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE16/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE17/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE18/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE19/>
+         <!--Optional:-->
+         <cre:P_ATTRIBUTE20/>
+         <!--Optional:-->
+         <cre:P_PERIOD_OF_INCAPACITY_ID/>
+         <!--Optional:-->
+         <cre:P_SSP1_ISSUED/>
+         <!--Optional:-->
+         <cre:P_MATERNITY_ID/>
+         <!--Optional:-->
+         <cre:P_SICKNESS_START_DATE/>
+         <!--Optional:-->
+         <cre:P_SICKNESS_END_DATE/>
+         <!--Optional:-->
+         <cre:P_PREGNANCY_RELATED_ILLNESS/>
+         <!--Optional:-->
+         <cre:P_REASON_FOR_NOTIFICATION_DELA/>
+         <!--Optional:-->
+         <cre:P_ACCEPT_LATE_NOTIFICATION_FLA/>
+         <!--Optional:-->
+         <cre:P_LINKED_ABSENCE_ID/>
+         <!--Optional:-->
+         <cre:P_BATCH_ID/>
+         <!--Optional:-->
+         <cre:P_CREATE_ELEMENT_ENTRY/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION_CATEGORY/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION1/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION2/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION3/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION4/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION5/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION6/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION7/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION8/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION9/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION10/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION11/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION12/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION13/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION14/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION15/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION16/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION17/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION18/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION19/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION20/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION21/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION22/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION23/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION24/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION25/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION26/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION27/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION28/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION29/>
+         <!--Optional:-->
+         <cre:P_ABS_INFORMATION30/>
+         <!--Optional:-->
+         <cre:P_ABSENCE_CASE_ID/>
+         <!--Optional:-->
+         <cre:P_PROGRAM_APPLICATION_ID/>
+         <!--Optional:-->
+         <cre:P_CALLED_FROM/>
+      </cre:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>OPERATIONS</con:username><con:password>welcome</con:password></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/" name="DELETE_PERSON_ABSENCE" bindingOperationName="DELETE_PERSON_ABSENCE" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hr="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/" xmlns:del="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/delete_person_absence/">
+   <soapenv:Header>
+      <hr:SOAHeader>
+         <!--Optional:-->
+         <hr:Responsibility>?</hr:Responsibility>
+         <!--Optional:-->
+         <hr:RespApplication>?</hr:RespApplication>
+         <!--Optional:-->
+         <hr:SecurityGroup>?</hr:SecurityGroup>
+         <!--Optional:-->
+         <hr:NLSLanguage>?</hr:NLSLanguage>
+         <!--Optional:-->
+         <hr:Org_Id>?</hr:Org_Id>
+      </hr:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <del:InputParameters>
+         <!--Optional:-->
+         <del:P_VALIDATE>?</del:P_VALIDATE>
+         <!--Optional:-->
+         <del:P_ABSENCE_ATTENDANCE_ID>?</del:P_ABSENCE_ATTENDANCE_ID>
+         <!--Optional:-->
+         <del:P_OBJECT_VERSION_NUMBER>?</del:P_OBJECT_VERSION_NUMBER>
+         <!--Optional:-->
+         <del:P_CALLED_FROM>?</del:P_CALLED_FROM>
+      </del:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/"/></con:call></con:operation><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/" name="UPDATE_PERSON_ABSENCE" bindingOperationName="UPDATE_PERSON_ABSENCE" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hr="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/" xmlns:upd="http://xmlns.oracle.com/apps/per/soaprovider/plsql/hr_person_absence_api/update_person_absence/">
+   <soapenv:Header>
+      <hr:SOAHeader>
+         <!--Optional:-->
+         <hr:Responsibility>?</hr:Responsibility>
+         <!--Optional:-->
+         <hr:RespApplication>?</hr:RespApplication>
+         <!--Optional:-->
+         <hr:SecurityGroup>?</hr:SecurityGroup>
+         <!--Optional:-->
+         <hr:NLSLanguage>?</hr:NLSLanguage>
+         <!--Optional:-->
+         <hr:Org_Id>?</hr:Org_Id>
+      </hr:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <upd:InputParameters>
+         <!--Optional:-->
+         <upd:P_VALIDATE>?</upd:P_VALIDATE>
+         <!--Optional:-->
+         <upd:P_EFFECTIVE_DATE>?</upd:P_EFFECTIVE_DATE>
+         <!--Optional:-->
+         <upd:P_ABSENCE_ATTENDANCE_ID>?</upd:P_ABSENCE_ATTENDANCE_ID>
+         <!--Optional:-->
+         <upd:P_ABS_ATTENDANCE_REASON_ID>?</upd:P_ABS_ATTENDANCE_REASON_ID>
+         <!--Optional:-->
+         <upd:P_COMMENTS>?</upd:P_COMMENTS>
+         <!--Optional:-->
+         <upd:P_DATE_NOTIFICATION>?</upd:P_DATE_NOTIFICATION>
+         <!--Optional:-->
+         <upd:P_DATE_PROJECTED_START>?</upd:P_DATE_PROJECTED_START>
+         <!--Optional:-->
+         <upd:P_TIME_PROJECTED_START>?</upd:P_TIME_PROJECTED_START>
+         <!--Optional:-->
+         <upd:P_DATE_PROJECTED_END>?</upd:P_DATE_PROJECTED_END>
+         <!--Optional:-->
+         <upd:P_TIME_PROJECTED_END>?</upd:P_TIME_PROJECTED_END>
+         <!--Optional:-->
+         <upd:P_DATE_START>?</upd:P_DATE_START>
+         <!--Optional:-->
+         <upd:P_TIME_START>?</upd:P_TIME_START>
+         <!--Optional:-->
+         <upd:P_DATE_END>?</upd:P_DATE_END>
+         <!--Optional:-->
+         <upd:P_TIME_END>?</upd:P_TIME_END>
+         <!--Optional:-->
+         <upd:P_ABSENCE_DAYS>?</upd:P_ABSENCE_DAYS>
+         <!--Optional:-->
+         <upd:P_ABSENCE_HOURS>?</upd:P_ABSENCE_HOURS>
+         <!--Optional:-->
+         <upd:P_AUTHORISING_PERSON_ID>?</upd:P_AUTHORISING_PERSON_ID>
+         <!--Optional:-->
+         <upd:P_REPLACEMENT_PERSON_ID>?</upd:P_REPLACEMENT_PERSON_ID>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE_CATEGORY>?</upd:P_ATTRIBUTE_CATEGORY>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE1>?</upd:P_ATTRIBUTE1>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE2>?</upd:P_ATTRIBUTE2>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE3>?</upd:P_ATTRIBUTE3>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE4>?</upd:P_ATTRIBUTE4>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE5>?</upd:P_ATTRIBUTE5>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE6>?</upd:P_ATTRIBUTE6>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE7>?</upd:P_ATTRIBUTE7>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE8>?</upd:P_ATTRIBUTE8>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE9>?</upd:P_ATTRIBUTE9>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE10>?</upd:P_ATTRIBUTE10>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE11>?</upd:P_ATTRIBUTE11>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE12>?</upd:P_ATTRIBUTE12>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE13>?</upd:P_ATTRIBUTE13>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE14>?</upd:P_ATTRIBUTE14>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE15>?</upd:P_ATTRIBUTE15>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE16>?</upd:P_ATTRIBUTE16>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE17>?</upd:P_ATTRIBUTE17>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE18>?</upd:P_ATTRIBUTE18>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE19>?</upd:P_ATTRIBUTE19>
+         <!--Optional:-->
+         <upd:P_ATTRIBUTE20>?</upd:P_ATTRIBUTE20>
+         <!--Optional:-->
+         <upd:P_PERIOD_OF_INCAPACITY_ID>?</upd:P_PERIOD_OF_INCAPACITY_ID>
+         <!--Optional:-->
+         <upd:P_SSP1_ISSUED>?</upd:P_SSP1_ISSUED>
+         <!--Optional:-->
+         <upd:P_MATERNITY_ID>?</upd:P_MATERNITY_ID>
+         <!--Optional:-->
+         <upd:P_SICKNESS_START_DATE>?</upd:P_SICKNESS_START_DATE>
+         <!--Optional:-->
+         <upd:P_SICKNESS_END_DATE>?</upd:P_SICKNESS_END_DATE>
+         <!--Optional:-->
+         <upd:P_PREGNANCY_RELATED_ILLNESS>?</upd:P_PREGNANCY_RELATED_ILLNESS>
+         <!--Optional:-->
+         <upd:P_REASON_FOR_NOTIFICATION_DELA>?</upd:P_REASON_FOR_NOTIFICATION_DELA>
+         <!--Optional:-->
+         <upd:P_ACCEPT_LATE_NOTIFICATION_FLA>?</upd:P_ACCEPT_LATE_NOTIFICATION_FLA>
+         <!--Optional:-->
+         <upd:P_LINKED_ABSENCE_ID>?</upd:P_LINKED_ABSENCE_ID>
+         <!--Optional:-->
+         <upd:P_BATCH_ID>?</upd:P_BATCH_ID>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION_CATEGORY>?</upd:P_ABS_INFORMATION_CATEGORY>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION1>?</upd:P_ABS_INFORMATION1>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION2>?</upd:P_ABS_INFORMATION2>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION3>?</upd:P_ABS_INFORMATION3>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION4>?</upd:P_ABS_INFORMATION4>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION5>?</upd:P_ABS_INFORMATION5>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION6>?</upd:P_ABS_INFORMATION6>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION7>?</upd:P_ABS_INFORMATION7>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION8>?</upd:P_ABS_INFORMATION8>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION9>?</upd:P_ABS_INFORMATION9>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION10>?</upd:P_ABS_INFORMATION10>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION11>?</upd:P_ABS_INFORMATION11>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION12>?</upd:P_ABS_INFORMATION12>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION13>?</upd:P_ABS_INFORMATION13>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION14>?</upd:P_ABS_INFORMATION14>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION15>?</upd:P_ABS_INFORMATION15>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION16>?</upd:P_ABS_INFORMATION16>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION17>?</upd:P_ABS_INFORMATION17>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION18>?</upd:P_ABS_INFORMATION18>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION19>?</upd:P_ABS_INFORMATION19>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION20>?</upd:P_ABS_INFORMATION20>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION21>?</upd:P_ABS_INFORMATION21>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION22>?</upd:P_ABS_INFORMATION22>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION23>?</upd:P_ABS_INFORMATION23>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION24>?</upd:P_ABS_INFORMATION24>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION25>?</upd:P_ABS_INFORMATION25>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION26>?</upd:P_ABS_INFORMATION26>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION27>?</upd:P_ABS_INFORMATION27>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION28>?</upd:P_ABS_INFORMATION28>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION29>?</upd:P_ABS_INFORMATION29>
+         <!--Optional:-->
+         <upd:P_ABS_INFORMATION30>?</upd:P_ABS_INFORMATION30>
+         <!--Optional:-->
+         <upd:P_ABSENCE_CASE_ID>?</upd:P_ABSENCE_CASE_ID>
+         <!--Optional:-->
+         <upd:P_PROGRAM_APPLICATION_ID>?</upd:P_PROGRAM_APPLICATION_ID>
+         <!--Optional:-->
+         <upd:P_CALLED_FROM>?</upd:P_CALLED_FROM>
+         <!--Optional:-->
+         <upd:P_OBJECT_VERSION_NUMBER>?</upd:P_OBJECT_VERSION_NUMBER>
+      </upd:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/hr_person_absence_api/"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="FND_WEB_SEC_Binding" type="wsdl" bindingName="{http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_web_sec/}FND_WEB_SEC_Binding" soapVersion="1_1" anonymous="optional" definition="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_web_sec/?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_web_sec/?wsdl"><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_web_sec/?wsdl</con:url><con:content><![CDATA[<definitions name="FND_WEB_SEC" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_web_sec/" xmlns:tns="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_web_sec/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns1="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_web_sec/validate_login/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_web_sec/validate_login/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <include schemaLocation="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_web_sec/APPS_FND_WEB_SEC_VALIDATE_LOGIN.xsd"/>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_web_sec/" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="SOAHeader">
+        <complexType>
+          <sequence>
+            <element name="Responsibility" minOccurs="0" type="string"/>
+            <element name="RespApplication" minOccurs="0" type="string"/>
+            <element name="SecurityGroup" minOccurs="0" type="string"/>
+            <element name="NLSLanguage" minOccurs="0" type="string"/>
+            <element name="Org_Id" minOccurs="0" type="string"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="VALIDATE_LOGIN_Input_Msg">
+    <part name="header" element="tns:SOAHeader"/>
+    <part name="body" element="tns1:InputParameters"/>
+  </message>
+  <message name="VALIDATE_LOGIN_Output_Msg">
+    <part name="body" element="tns1:OutputParameters"/>
+  </message>
+  <portType name="FND_WEB_SEC_PortType">
+    <operation name="VALIDATE_LOGIN">
+      <input message="tns:VALIDATE_LOGIN_Input_Msg"/>
+      <output message="tns:VALIDATE_LOGIN_Output_Msg"/>
+    </operation>
+  </portType>
+  <binding name="FND_WEB_SEC_Binding" type="tns:FND_WEB_SEC_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="VALIDATE_LOGIN">
+      <soap:operation soapAction="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_web_sec/"/>
+      <input>
+        <soap:header message="tns:VALIDATE_LOGIN_Input_Msg" part="header" use="literal"/>
+        <soap:body parts="body" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="FND_WEB_SEC_Service">
+    <port name="FND_WEB_SEC_Port" binding="tns:FND_WEB_SEC_Binding">
+      <soap:address location="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_web_sec/"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_web_sec/APPS_FND_WEB_SEC_VALIDATE_LOGIN.xsd</con:url><con:content><![CDATA[<schema targetNamespace="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_web_sec/validate_login/" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:db="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_web_sec/validate_login/">
+  <element name="InputParameters">
+    <complexType>
+      <sequence>
+        <element name="P_USER" type="string" db:index="1" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+        <element name="P_PWD" type="string" db:index="2" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="OutputParameters">
+    <complexType>
+      <sequence>
+        <element name="VALIDATE_LOGIN" type="string" db:index="0" db:type="VARCHAR2" minOccurs="0" nillable="true"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_web_sec/</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_web_sec/" name="VALIDATE_LOGIN" bindingOperationName="VALIDATE_LOGIN" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_web_sec/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fnd="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_web_sec/" xmlns:val="http://xmlns.oracle.com/apps/fnd/soaprovider/plsql/fnd_web_sec/validate_login/">
+   <soapenv:Header>
+      <fnd:SOAHeader>
+         <!--Optional:-->
+         <fnd:Responsibility>SYSTEM_ADMINISTRATOR</fnd:Responsibility>
+         <!--Optional:-->
+         <fnd:RespApplication>SYSADMIN</fnd:RespApplication>
+         <!--Optional:-->
+         <fnd:SecurityGroup>STANDARD</fnd:SecurityGroup>
+         <!--Optional:-->
+         <fnd:NLSLanguage>AMERICAN</fnd:NLSLanguage>
+         <!--Optional:-->
+         <fnd:Org_Id>0</fnd:Org_Id>
+      </fnd:SOAHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <val:InputParameters>
+         <!--Optional:-->
+         <val:P_USER>OPERATIONS</val:P_USER>
+         <!--Optional:-->
+         <val:P_PWD>welcome</val:P_PWD>
+      </val:InputParameters>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>OPERATIONS</con:username><con:password>welcome</con:password></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://apps.vis.com:8000/webservices/SOAProvider/plsql/fnd_web_sec/"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:sensitiveInformation/></con:soapui-project>
